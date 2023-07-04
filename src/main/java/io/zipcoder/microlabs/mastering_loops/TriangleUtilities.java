@@ -3,7 +3,15 @@ package io.zipcoder.microlabs.mastering_loops;
 public class TriangleUtilities {
 
     public static String getTriangle(int numberOfRows) {
-        return null;
+        StringBuilder sb = new StringBuilder();
+
+        int idx = 1;
+        while (idx < numberOfRows) {
+            String thisRow = getRow(idx);
+            sb.append(thisRow).append("\n");
+            idx++;
+        }
+        return sb.toString();
     }
 
     public static String getRow(int numberOfStars) {
@@ -11,10 +19,12 @@ public class TriangleUtilities {
     }
 
     public static String getSmallTriangle() {
-        return null;
+
+        return getTriangle(4);
     }
 
     public static String getLargeTriangle() {
-        return null;
+
+        return getTriangle(10);
     }
 }
