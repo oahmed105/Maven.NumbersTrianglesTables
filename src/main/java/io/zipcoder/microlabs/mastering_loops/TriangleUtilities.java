@@ -15,12 +15,16 @@ public class TriangleUtilities {
     }
 
     public static String getRow(int numberOfStars) {
-        return null;
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < numberOfStars; i++) {
+            sb.append("*");
+        }
+        return sb.toString();
     }
 
     public static String getSmallTriangle() {
 
-        return getTriangle(4);
+        return getTriangle(5);
     }
 
     public static String getLargeTriangle() {
